@@ -61,9 +61,6 @@ model.fit([en_in_data, dec_in_data], dec_tr_data, batch_size=64, epochs=100, val
 
 If you'd like to contribute to this project, feel free to fork the repository and submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Sample 
 
