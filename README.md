@@ -1,5 +1,5 @@
 
-# Bag of Characters Encoder-Decoder Model
+# Language Translator (English to French Case Study) Bag of Characters Encoder-Decoder Model
 
 This repository contains an implementation of an encoder-decoder model for sequence-to-sequence learning using a "Bag of Characters" approach. The model is designed to tokenize input text at the character level and process it for tasks such as text generation or machine translation.
 
