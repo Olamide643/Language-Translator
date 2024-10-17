@@ -68,6 +68,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Sample 
 
 <p align="center">
-  <img src="/sample.png" width="700" title="hover text">
+  <img src="/Sample.png" width="700" title="hover text">
 </p>
 
