@@ -1,11 +1,16 @@
 
 # Language Translator (English to French Case Study) Bag of Characters Encoder-Decoder Model
 
-This repository contains an implementation of an encoder-decoder model for sequence-to-sequence learning using a "Bag of Characters" approach. The model is designed to tokenize input text at the character level and process it for tasks such as text generation or machine translation.
+
+This project is a character-level sequence-to-sequence model for translating English to French. The model is built using TensorFlow and Keras, leveraging LSTM layers for the encoder-decoder architecture. The project also includes a Tkinter-based graphical user interface (GUI) to interact with the model and translate text in real-time.
 
 ## Overview
 
-The core functionality of this code revolves around tokenizing text data into individual characters and preparing it for an encoder-decoder model using LSTM (Long Short-Term Memory) networks. The model is trained using `categorical_crossentropy` loss and is designed to map input character sequences to output sequences.
+The project consists of an English-to-French language translator using the following key components:
+- **Data Preprocessing**: Prepares the text data by tokenizing and vectorizing the input and target texts.
+- **Model Architecture**: Implements a sequence-to-sequence LSTM model with attention mechanism to handle character-level translation.
+- **GUI**: A simple Tkinter-based interface for inputting English sentences and receiving translated French sentences.
+
 
 ## Features
 
@@ -15,6 +20,17 @@ The core functionality of this code revolves around tokenizing text data into in
 - Model training with `categorical_crossentropy` loss and `adam` optimizer.
 
 ## Installation
+
+To get started, you need to set up your environment with the necessary dependencies.
+
+1. Clone this repository to your local machine:
+   ```bash
+   git clone https://github.com/Olamide643/Language-Translator.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd language-translator
+   ```
 
 To run this project, you will need:
 
@@ -30,18 +46,27 @@ You can install the dependencies using:
 pip install numpy tensorflow scikit-learn
 ```
 
+
+
+
 ## Usage
 
-1. **Input Data Preparation:**
-   The function `bagofcharacters` takes `input_texts` and `target_texts` as inputs, tokenizes the text at the character level using `CountVectorizer`, and pads the sequences as necessary.
+1. **Data Preparation**: Make sure to provide a dataset in the format of a tab-separated file containing English-French sentence pairs. Modify the `data_path` variable in the script to point to your dataset (`fra.txt` by default).
 
-2. **Model Architecture:**
-   - An LSTM-based encoder takes the input sequences.
-   - The decoder is also an LSTM that uses the encoder's states to generate target sequences.
-   - The model outputs sequences using a softmax activation layer.
+2. **Model Training**:
+   To train the model, run the following command:
+   ```bash
+   python train.py
+   ```
+   This script preprocesses the data, trains the model using LSTM layers, and saves the trained model and tokenizer to disk.
 
-3. **Training:**
-   After defining the model, it is compiled using the `adam` optimizer and trained with `categorical_crossentropy` as the loss function and `accuracy` as a metric.
+3. **Running the GUI**:
+   Once the model is trained, you can start the Tkinter GUI by running:
+   ```bash
+   python gui.py
+   ```
+   Enter an English sentence into the provided text box, and the model will return the corresponding French translation.
+
 
 ### Example
 
